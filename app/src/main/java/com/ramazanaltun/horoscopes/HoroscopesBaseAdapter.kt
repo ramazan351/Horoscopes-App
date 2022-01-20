@@ -8,35 +8,14 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 
-class HoroscopesBaseAdapter(context: Context) : BaseAdapter() {
+class HoroscopesBaseAdapter(context: Context,horoscopesValues:ArrayList<HoroscobeModel>) : BaseAdapter() {
     var allHoroscobesList: ArrayList<HoroscobeModel>
     var context: Context
 
     init {
-        allHoroscobesList = ArrayList<HoroscobeModel>(12)
+        this.allHoroscobesList = horoscopesValues
         this.context = context
-        var horoscopesNamesList = context.resources.getStringArray(R.array.horoscopers)
-        var horoscopeDates = context.resources.getStringArray(R.array.horoscopersDates)
 
-        var horoscopeIcons = arrayOf(
-            R.drawable.aries1,
-            R.drawable.taurus2,
-            R.drawable.gemeni3,
-            R.drawable.cancer4,
-            R.drawable.leo5,
-            R.drawable.virgo6,
-            R.drawable.libra7,
-            R.drawable.scorpion8,
-            R.drawable.sagittarius9,
-            R.drawable.capricorn10,
-            R.drawable.aquarius11,
-            R.drawable.pisces12
-        )
-        for (i in 0..11) {
-            var templateHoroscope =
-                HoroscobeModel(horoscopesNamesList[i], horoscopeDates[i], horoscopeIcons[i])
-            allHoroscobesList.add(templateHoroscope)
-        }
     }
 
     override fun getCount(): Int {

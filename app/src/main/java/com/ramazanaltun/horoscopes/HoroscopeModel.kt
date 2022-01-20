@@ -1,3 +1,5 @@
 package com.ramazanaltun.horoscopes
 
-data class HoroscobeModel(var name: String, var date: String, var icon: Int) {}
+import java.io.Serializable
+
+data class HoroscobeModel(var name: String, var date: String, var icon: Int,var desciption:String, var largeIcon:Int):Serializable {}
