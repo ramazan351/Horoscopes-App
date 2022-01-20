@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         viewBinding.lstvwHoroscope.setOnItemClickListener { parent, view, position, id ->
             var intent=Intent(this@MainActivity, HoroscopeDetail::class.java)
             intent.putExtra("position",position)
+            intent.putExtra("horoscopeValues", allHoroscopesInformationsList)
             startActivity(intent)
         }
     }

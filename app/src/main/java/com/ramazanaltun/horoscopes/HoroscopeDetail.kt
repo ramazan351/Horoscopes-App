@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Toast
 import com.ramazanaltun.horoscopes.databinding.ActivityMainBinding
+import java.util.ArrayList
 
 class HoroscopeDetail : AppCompatActivity() {
     private lateinit var viewBinding: ActivityMainBinding
@@ -13,7 +14,8 @@ class HoroscopeDetail : AppCompatActivity() {
         viewBinding= ActivityMainBinding.inflate(   LayoutInflater.from(this))
         setContentView(viewBinding.root)
         var position= intent.extras?.get("position")
-        Toast.makeText(this,"clicked item: "+ position.toString(),Toast.LENGTH_LONG).show()
+        var horoscopeValues= intent.extras?.get("horoscopeValues") as ArrayList<HoroscobeModel>
+        Toast.makeText(this,"clicked item: "+ position.toString()+horoscopeValues.size,Toast.LENGTH_LONG).show()
 
     }
 }

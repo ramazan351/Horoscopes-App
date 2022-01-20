@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Kotlin/Horoscopes/app/src/main/res/drawable/scrim.xml" value="0.19166666666666668" />
+        <entry key="..\:/Kotlin/Horoscopes/app/src/main/res/layout/activity_horoscope_detail.xml" value="0.4" />
         <entry key="..\:/Kotlin/Horoscopes/app/src/main/res/layout/activity_main.xml" value="0.2359375" />
         <entry key="..\:/Kotlin/Horoscopes/app/src/main/res/layout/single_row.xml" value="0.4" />
       </map>
